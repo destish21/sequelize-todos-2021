@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
   const renderTodoList = todos => {
     const todosHTML = todos.map(todo => {
-      const completeClass = todos.complete ? "line-through" : ''
+      const completeClass = todo.complete ? "line-through" : ''
       return `<li class="list-group-item todo-item">
-    <span> class="${completeClass}"> ${todo.text}</span>
+    <span class="${completeClass}"> ${todo.text}</span>
     <input data-id="${todo.id}" type="text" class="edit" style="display: none;">
     <button data-id="${todo.id}" class="delete btn btn-danger">x</button>
     <button data-id="${todo.id}" data-complete="${todo.complete}" class="complete btn btn-primary">✓</button>
@@ -24,9 +24,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
   
     }).join('')
     todoListSpan.innerHTML = todosHTML
-
   }
-
   form.addEventListener("submit", e => {
     e.preventDefault()
     const text = newTodoInput.value
@@ -96,7 +94,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
   todoListSpan.addEventListener('blur', e => {
     if (e.target.matches('input')) {
-      const span = e.target.prviousElementSibling
+      const span = e.target.previousElementSibling
       e.target.value = span.innerText
       span.style.display = 'block'
       e.target.style.display = "none"
