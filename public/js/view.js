@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     }
   })
 
-  todoListSpan.addEventListener('Keyup', e => {
+  todoListSpan.addEventListener('keyup', e => {
     if (e.keyCode === 13) {
       const newTodo = {
         id: e.target.getAttribute('data-id'),
