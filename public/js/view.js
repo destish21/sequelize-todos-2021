@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', (e) => {
   console.log('DOM loaded!');
+<<<<<<< HEAD
     // your code here...
+=======
+  // your code here...
+>>>>>>> f4b4375e7dd7b5e2640dd6f32c69219fc9e902c9
   const form = document.getElementById("todo-form")
   const newTodoInput = document.querySelector("input.new-item")
 
@@ -21,10 +25,11 @@ document.addEventListener('DOMContentLoaded', (e) => {
     <button data-id="${todo.id}" class="delete btn btn-danger">x</button>
     <button data-id="${todo.id}" data-complete="${todo.complete}" class="complete btn btn-primary">✓</button>
   </li>`
-  
+
     }).join('')
     todoListSpan.innerHTML = todosHTML
   }
+
   form.addEventListener("submit", e => {
     e.preventDefault()
     const text = newTodoInput.value
@@ -103,7 +108,11 @@ document.addEventListener('DOMContentLoaded', (e) => {
   }, true)
 
   getTodos()
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> f4b4375e7dd7b5e2640dd6f32c69219fc9e902c9
 });
 
 //  select DOM elements
