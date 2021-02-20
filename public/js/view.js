@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', (e) => {
   console.log('DOM loaded!');
-
+  // your code here...
   const form = document.getElementById("todo-form")
   const newTodoInput = document.querySelector("input.new-item")
 
@@ -21,10 +21,11 @@ document.addEventListener('DOMContentLoaded', (e) => {
     <button data-id="${todo.id}" class="delete btn btn-danger">x</button>
     <button data-id="${todo.id}" data-complete="${todo.complete}" class="complete btn btn-primary">✓</button>
   </li>`
-  
+
     }).join('')
     todoListSpan.innerHTML = todosHTML
   }
+
   form.addEventListener("submit", e => {
     e.preventDefault()
     const text = newTodoInput.value
@@ -103,7 +104,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
   }, true)
 
   getTodos()
-  // your code here...
+  
 });
 
 //  select DOM elements
