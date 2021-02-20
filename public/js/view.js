@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', (e) => {
   console.log('DOM loaded!');
-
+    // your code here...
   const form = document.getElementById("todo-form")
   const newTodoInput = document.querySelector("input.new-item")
 
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
   }, true)
 
   getTodos()
-  // your code here...
+
 });
 
 //  select DOM elements
